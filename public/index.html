@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat Room</title>
+    <!-- Mengimpor stylesheet Font Awesome dari CDN untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Mengimpor stylesheet lokal untuk tata letak dan desain -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Mengimpor skrip Socket.IO dari server lokal untuk komunikasi real-time -->
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <!-- Mengimpor skrip lokal untuk logika klien -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="name-input-container" id="name-input-container">
+        <h2>Enter your name</h2>
+        <input type="text" id="name-input" placeholder="Type your name...">
+        <button id="join-button">Join Chat</button>
+    </div>
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <h2>Chat Room</h2>
+            <i class="fas fa-sign-out-alt logout-icon" id="logout-button"></i>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+        </div>
+        <div class="chat-input">
+            <textarea id="message-input" placeholder="Type your message..."></textarea>
+            <button type="submit" id="send-button">Send</button>
+        </div>
+    </div>
+</body>
